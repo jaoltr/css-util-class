@@ -1,0 +1,8 @@
+@import '../abstracts/config';
+
+// Linear gradient with two palette colors
+.u-bg-gradient-to-r-primary-secondary {
+  background: linear-gradient(to right, map-get($base-colors, primary), map-get($base-colors, secondary));
+}
+
+// A function-based approach could also loop through color pairs to generate many gradient combos
