@@ -1,0 +1,42 @@
+// Breakpoints map
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+// Fluid spacing tokens using clamp(min, preferred, max)
+$fluid-spacing: (
+  xs: clamp(0.5rem, 1vw, 1rem),
+  sm: clamp(0.75rem, 2vw, 1.25rem),
+  md: clamp(1rem, 3vw, 1.5rem),
+  lg: clamp(1.25rem, 4vw, 2rem),
+  xl: clamp(1.5rem, 5vw, 3rem)
+);
+
+// Base color palette (some single “key” color plus variations)
+$base-colors: (
+  primary: #1d4ed8,
+  secondary: #9333ea,
+  accent: #10b981,
+  warning: #f59e0b,
+  danger: #ef4444,
+  neutral-50: #fafafa,
+  neutral-100: #f4f4f5,
+  neutral-200: #e4e4e7,
+  neutral-300: #d4d4d8,
+  neutral-400: #a1a1aa,
+  neutral-500: #71717a,
+  neutral-600: #52525b,
+  neutral-700: #3f3f46,
+  neutral-800: #27272a,
+  neutral-900: #18181b
+);
+
+// We may define a “theme” map to quickly reference light vs. dark
+$theme-colors: (
+  light-bg: map-get($base-colors, neutral-50),
+  dark-bg: map-get($base-colors, neutral-900),
+  dark-surface: map-get($base-colors, neutral-800)
+);
