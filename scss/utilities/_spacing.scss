@@ -1,0 +1,14 @@
+@import '../abstracts/config';
+
+// Generate fluid spacing classes with clamp()
+@include fluid-spacing-utility(m, $fluid-spacing);
+@include fluid-spacing-utility(p, $fluid-spacing);
+
+// Negative margin using loop
+@each $key, $val in $fluid-spacing {
+  .u--m-#{$key}   { margin: calc(#{$val} * -1); }
+  .u--mt-#{$key}  { margin-top: calc(#{$val} * -1); }
+  .u--mr-#{$key}  { margin-right: calc(#{$val} * -1); }
+  .u--mb-#{$key}  { margin-bottom: calc(#{$val} * -1); }
+  .u--ml-#{$key}  { margin-left: calc(#{$val} * -1); }
+}
