@@ -1,0 +1,19 @@
+@import '../abstracts/config';
+
+// Standard fixed-size utility
+.u-w-full    { width: 100%; }
+.u-h-screen  { height: 100vh; }
+
+// Fluid width example
+.u-w-fluid-sm {
+  width: fluid-size(200px, 400px, 320px, 1280px);
+}
+
+// Fluid height example
+.u-h-fluid-md {
+  height: fluid-size(300px, 600px);
+}
+
+// Max-width placeholders
+%u-max-w-md  { max-width: 28rem; } // 448px example
+.u-max-w-md  { @extend %u-max-w-md; }
