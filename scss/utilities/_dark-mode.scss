@@ -1,0 +1,16 @@
+@import '../abstracts/config';
+
+.dark & {
+  // Override background
+  .u-dark\:bg-surface {
+    background-color: map-get($theme-colors, dark-surface);
+  }
+  // Override text
+  .u-dark\:text-light {
+    color: map-get($base-colors, neutral-50);
+  }
+  // Example: entire region using placeholders
+  .u-dark\:bg-primary:hover {
+    background-color: darken(map-get($base-colors, primary), 10%);
+  }
+}
