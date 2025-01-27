@@ -1,0 +1,13 @@
+// Return a readable contrast color (black or white) based on background color brightness
+@function contrast-color($color) {
+  // We'll approximate perceived brightness using luma
+  $luma: (0.299 * red($color) + 0.587 * green($color) + 0.114 * blue($color)) / 255;
+  @return if($luma > 0.5, #000000, #ffffff);
+}
+
+// Example function for fluid typography or sizing
+// fluid-size(minSize, maxSize, minViewport, maxViewport)
+@function fluid-size($min, $max, $minVw: 320px, $maxVw: 1280px) {
+  // Example formula using clamp()
+  @return clamp(#{$min}, calc(#{$min} + (#{$max} - #{$min}) * (100vw - #{$minVw}) / (#{$maxVw} - #{$minVw})), #{$max});
+}
