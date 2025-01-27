@@ -1,0 +1,15 @@
+@import '../abstracts/config';
+
+// Example: direct color classes
+@include color-utility(color, "u-text", $base-colors);
+@include color-utility(background-color, "u-bg", $base-colors);
+
+// Generate a “contrast” text color class for each color, e.g., .u-text-contrast-primary => #ffffff or #000000
+@each $name, $color-value in $base-colors {
+  .u-text-contrast-#{$name} {
+    color: contrast-color($color-value);
+  }
+  .u-bg-contrast-#{$name} {
+    background-color: contrast-color($color-value);
+  }
+}
