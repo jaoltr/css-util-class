@@ -1,0 +1,27 @@
+@import '../abstracts/config';
+
+// Basic text sizes
+.u-text-sm   { font-size: 0.875rem; }
+.u-text-base { font-size: 1rem; }
+.u-text-lg   { font-size: 1.125rem; }
+.u-text-xl   { font-size: 1.25rem; }
+
+// Fluid heading example using clamp()
+.u-h1 {
+  font-size: fluid-size(1.5rem, 3rem, 320px, 1440px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.u-h2 {
+  font-size: fluid-size(1.25rem, 2.25rem);
+  font-weight: 600;
+}
+
+// Font weights
+.u-font-light   { font-weight: 300; }
+.u-font-normal  { font-weight: 400; }
+.u-font-bold    { font-weight: 700; }
+
+// Transform & alignment
+.u-uppercase    { text-transform: uppercase; }
+.u-text-center  { text-align: center; }
