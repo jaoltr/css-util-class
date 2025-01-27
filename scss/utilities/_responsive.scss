@@ -1,0 +1,21 @@
+@import '../abstracts/config';
+
+@each $bp, $size in $breakpoints {
+  .#{$bp}\:hidden {
+    @include respond($bp) {
+      display: none;
+    }
+  }
+  .#{$bp}\:block {
+    @include respond($bp) {
+      display: block;
+    }
+  }
+  // e.g., .sm:flex, .md:flex-col, .lg:grid, etc.
+  .#{$bp}\:flex {
+    @include respond($bp) {
+      display: flex;
+    }
+  }
+  // Add more as you like
+}
