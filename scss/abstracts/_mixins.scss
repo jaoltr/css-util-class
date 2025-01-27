@@ -1,0 +1,24 @@
+// Media query mixin
+@mixin respond($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Generate color classes with hover, focus, or any prefix if needed
+@mixin color-utility($property, $prefix, $colors-map) {
+  @each $name, $color-value in $colors-map {
+    .#{$prefix}-#{$name} {
+      #{$property}: #{$color-value};
+    }
+  }
+}
+
+// A fluid utility generator example
+@mixin fluid-spacing-utility($property, $map) {
+  @each $key, $val in $map {
+    .u-#{$property}-#{$key} {
+      #{$property}: #{$val};
+    }
+  }
+}
