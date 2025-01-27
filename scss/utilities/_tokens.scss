@@ -1,0 +1,19 @@
+@import '../abstracts/config';
+
+// Background tokens
+%bg-primary { background-color: map-get($base-colors, primary); }
+%bg-secondary { background-color: map-get($base-colors, secondary); }
+%bg-warning { background-color: map-get($base-colors, warning); }
+
+// Text tokens
+%text-primary { color: map-get($base-colors, primary); }
+%text-secondary { color: map-get($base-colors, secondary); }
+%text-contrast { color: contrast-color(map-get($base-colors, primary)); }
+
+// Example usage:
+// .u-btn-primary {
+//   @extend %bg-primary;
+//   @extend %text-contrast;
+//   padding: 0.75rem 1rem;
+//   border-radius: 0.375rem;
+// }
